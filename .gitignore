@@ -13,6 +13,9 @@ local.properties
 .settings/
 .loadpath
 
+# Vscode
+.vscode
+
 # Eclipse Core
 .project
 
