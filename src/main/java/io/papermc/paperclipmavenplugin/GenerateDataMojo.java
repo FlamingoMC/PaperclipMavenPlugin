@@ -52,7 +52,7 @@ public class GenerateDataMojo extends AbstractMojo {
 
     @Override
     public void execute() throws MojoExecutionException {
-        final Path patch = generatedResourceLocation.resolve("paperMC.patch");
+        final Path patch = generatedResourceLocation.resolve("flamingoMC.patch");
         final Path propFile = generatedResourceLocation.resolve("patch.properties");
         final Path protocol = generatedResourceLocation.resolve("META-INF/" + PROTOCOL_FILE);
 
@@ -138,7 +138,7 @@ public class GenerateDataMojo extends AbstractMojo {
         final Properties prop = new Properties();
         prop.setProperty("originalHash", toHex(vanillaMinecraftHash));
         prop.setProperty("patchedHash", toHex(paperMinecraftHash));
-        prop.setProperty("patch", "paperMC.patch");
+        prop.setProperty("patch", "flamingoMC.patch");
         prop.setProperty("sourceUrl", "https://launcher.mojang.com/v1/objects/" + toHex(vanillaSha1).toLowerCase() + "/server.jar");
         prop.setProperty("version", mcVersion);
 
